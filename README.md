@@ -10,3 +10,6 @@ https://hal.archives-ouvertes.fr/tel-00419724/document
 
 https://hal.archives-ouvertes.fr/tel-00292097/document
 >cas d application dans la maintenance et etat de l art sur la RA 
+
+https://hal.archives-ouvertes.fr/tel-00656918/document
+> impact de la RA sur les operateurs pendant une operation de maintenance ==> sujet similaire au notre 
