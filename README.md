@@ -13,3 +13,7 @@ https://hal.archives-ouvertes.fr/tel-00292097/document
 
 https://hal.archives-ouvertes.fr/tel-00656918/document
 > impact de la RA sur les operateurs pendant une operation de maintenance ==> sujet similaire au notre 
+
+https://hal.archives-ouvertes.fr/tel-01442986v2/document
+>  Vers un système interactif de réalité augmentée mobile pour la supervision de scénarios de maintenance industrielle
+
