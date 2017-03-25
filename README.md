@@ -17,7 +17,8 @@ https://hal.archives-ouvertes.fr/tel-00656918/document
 https://hal.archives-ouvertes.fr/tel-01442986v2/document
 >  Vers un système interactif de réalité augmentée mobile pour la supervision de scénarios de maintenance industrielle
 
-##Document "Fondateur" 
+## Document "Fondateur" :
+
 http://www.cs.unc.edu/~azuma/ARpresence.pdf
 
 https://cs.gmu.edu/~zduric/cs499/Readings/r76JBo-Milgram_IEICE_1994.pdf
