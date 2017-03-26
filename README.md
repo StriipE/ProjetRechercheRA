@@ -21,4 +21,6 @@ https://hal.archives-ouvertes.fr/tel-01442986v2/document
 
 http://www.cs.unc.edu/~azuma/ARpresence.pdf
 
-https://cs.gmu.edu/~zduric/cs499/Readings/r76JBo-Milgram_IEICE_1994.pdf
+https://cs.gmu.edu/~zduric/cs499/Readings/r76JBo-Milgram_IEICE_1994.pdf 
+
+https://www.researchgate.net/profile/Rick_Van_Krevelen2/publication/292150312_Augmented_Reality_Technologies_Applications_and_Limitations/links/56ab2b4108aed5a01359c113.pdf
