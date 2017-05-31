@@ -25,4 +25,10 @@ public class Tournevis implements Tool {
         return this.toolName;
     }
 
+    @Override
+    public String toString()
+    {
+        return this.getToolName();
+    }
+
 }

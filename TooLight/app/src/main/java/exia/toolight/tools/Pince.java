@@ -25,5 +25,10 @@ public class Pince implements Tool {
         return this.toolName;
     }
 
+    @Override
+    public String toString()
+    {
+        return this.getToolName();
+    }
 
 }

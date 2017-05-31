@@ -5,6 +5,6 @@ package exia.toolight;
  */
 
 public interface Tool {
-    public void setToolName();
-    public String getToolName();
+    void setToolName();
+    String getToolName();
 }
