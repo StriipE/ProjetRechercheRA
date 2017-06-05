@@ -28,7 +28,7 @@ import java.util.Vector;
 import mpi.cbg.fly.Feature;
 import mpi.cbg.fly.SIFT;
 
-public class CameraActivity extends AppCompatActivity{
+public class CameraSIFTActivity extends AppCompatActivity{
 
 
     private static final int PICTURE_RESULT = 9;
@@ -51,7 +51,7 @@ public class CameraActivity extends AppCompatActivity{
         BaseImageView = (ImageView)findViewById(R.id.Base);
         mView = (ImageView) findViewById(R.id.view);
         Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        CameraActivity.this.startActivityForResult(camera, PICTURE_RESULT);
+        CameraSIFTActivity.this.startActivityForResult(camera, PICTURE_RESULT);
 
     }
 
@@ -68,7 +68,7 @@ public class CameraActivity extends AppCompatActivity{
         switch (item.getItemId()) {
             case R.id.camera:
                 Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                CameraActivity.this.startActivityForResult(camera, PICTURE_RESULT);
+                CameraSIFTActivity.this.startActivityForResult(camera, PICTURE_RESULT);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -217,13 +217,13 @@ public class CameraActivity extends AppCompatActivity{
                     mView.setImageBitmap(mPicture);
                     break;
                 case MEMORY_ERROR:
-                    builder = new AlertDialog.Builder(CameraActivity.this);
+                    builder = new AlertDialog.Builder(CameraSIFTActivity.this);
                     builder.setMessage("Out of memory.\nPicture too big.");
                     builder.setPositiveButton("Ok", null);
                     builder.show();
                     break;
                 case ERROR:
-                    builder = new AlertDialog.Builder(CameraActivity.this);
+                    builder = new AlertDialog.Builder(CameraSIFTActivity.this);
                     builder.setMessage("Error during the process.");
                     builder.setPositiveButton("Ok", null);
                     builder.show();

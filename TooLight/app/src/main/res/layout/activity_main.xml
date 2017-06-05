@@ -13,7 +13,7 @@
         android:text="Check the current tool list"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="133dp"
+        tools:layout_editor_absoluteY="207dp"
         app:layout_constraintHorizontal_bias="0.503" />
     <Button
         android:id="@+id/siftCameraButton"
@@ -22,8 +22,17 @@
         android:text="Activate the camera with Sift treatment"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="16dp"
-        app:layout_constraintHorizontal_bias="0.503" />
+        tools:layout_editor_absoluteY="109dp" />
+
+    <Button
+        android:id="@+id/orbCameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Activate the camera with orb treatment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="33dp"
+        app:layout_constraintHorizontal_bias="0.51" />
 
 
 </android.support.constraint.ConstraintLayout>

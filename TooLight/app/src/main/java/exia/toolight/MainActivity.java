@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button consultToolListButton = (Button) findViewById(R.id.toolListButton);
         Button siftCameraButton = (Button)findViewById(R.id.siftCameraButton);
-
+        Button orbCameraButton = (Button)findViewById(R.id.orbCameraButton);
         consultToolListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,10 +33,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        orbCameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activateOrbCamera();
+            }
+        });
+    }
+
+    public void activateOrbCamera(){
+        Intent orbCamera = new Intent(this, CameraORBActivity.class);
+        startActivity(orbCamera);
     }
 
     public void activateSiftCamera(){
-        Intent siftCamera = new Intent(this, CameraActivity.class);
+        Intent siftCamera = new Intent(this, CameraSIFTActivity.class);
         startActivity(siftCamera);
 
     }
