@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<ImageView
+    android:id="@+id/Base"
+    android:layout_width="307dp"
+    android:layout_height="164dp"
+    android:layout_weight="0.07"
+    android:visibility="visible"
+    app:srcCompat="@mipmap/a" />-->
+
+    <ImageView android:layout_width="311dp"
+        android:layout_height="179dp" android:id="@+id/view" android:keepScreenOn="true"/>
+
+</LinearLayout>

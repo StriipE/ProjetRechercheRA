@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.Serializable;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button consultToolListButton = (Button) findViewById(R.id.toolListButton);
+        Button siftCameraButton = (Button)findViewById(R.id.siftCameraButton);
 
         consultToolListButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,8 +26,20 @@ public class MainActivity extends AppCompatActivity {
                 consultToolList();
             }
         });
+        siftCameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activateSiftCamera();
+            }
+        });
+
     }
 
+    public void activateSiftCamera(){
+        Intent siftCamera = new Intent(this, CameraActivity.class);
+        startActivity(siftCamera);
+
+    }
     public void consultToolList() {
 
         Intent toolListIntent = new Intent(this, ToolListActivity.class);

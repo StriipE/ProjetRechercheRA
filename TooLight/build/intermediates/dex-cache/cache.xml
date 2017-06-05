@@ -3,129 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\d787605058390ba8bdca3875f698641b3f7ccc97\output\jars\classes.jar"
+        jar="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8c282c83846912e01d2f919346dad89be97fa963\classes.dex" />
+        sha1="68adc9a9cade9ab98a5cbb7798ae46f4c99fb877">
+        <dex dex="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_92955ddd5d09f965233d69518a9a6ede718d4ae2\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\auffr\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jar="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\src\libs\javasift.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_436490e987175b5f0f1e2ebfb66c6c2cf3c54e1d\classes.dex" />
+        sha1="16bad636672081690b1d0464231402f10677b3f4">
+        <dex dex="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\2\javasift_bdc574f90a5380e35eff5e657bf50030f9c79883\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\9a41f00052d056bc942da1a7c1ec0b7c1c3bea82\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_69cf2c1c95eabe2c487d9985c13af44cb5973851\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\cd86862c87ff27129a3c7a12ed4a43c0e8255397\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_843399338ba51c69b86d871d35b480fb22260c85\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\cb51cfaf483d19485452769aa0e6c4c9fc31f76d\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_79691846155cb9f7306955abf626ecbe66328426\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\8f00d18cc318ec1c55e018c73fa7fef540cfd7c1\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c9429b1803c1dd07e1b1e8ef8a655792b0ad352d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="c347e22a235d08cb4354a5a8e6c1110e71009b77">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b3bb0028c2fbd9ca583386b4d0a6bc2b185bd8b1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3195fb41d1174b0bf77b1779f07a23e042e7edee\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\48a716259c353f76cb3e8ae778292369159fe8e7\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_af1baf90979a6a0ad29b6036ece195f088638774\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\265dded2c7b164afa49d5d5dd41b7db83f6e8162\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_026f6617aa26788d5fc7ba4b9c4368a1f2b534d5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\64fe0a5eab6a114b2a960144da035d9fe6f86d48\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_67a540104d33fe9ff896d15a66a0f8864e219702\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\743c9d20f4f9a3f050a87d0657650f21e873968a\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_30eb481687553c8e9c84d022029aa1ec5bbb5e37\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\.android\build-cache\0ff560ccbb9d5241e7c97ef4ea0589de86009632\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b6f377a9eb33da77978dac0f0b1515524d851414\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\auffr\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\Users\auffr\AndroidStudioProjects\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_dcd161d594799effc7aefd166b2fd18e29b1cc1f\classes.dex" />
+        <dex dex="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_304180c26f8c71b28f96737a091158a9aa7e3031\classes.dex" />
     </item>
 
 </items>
