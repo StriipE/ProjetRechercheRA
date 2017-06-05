@@ -1,0 +1,22 @@
+doctype html
+<html>
+
+body
+    h1 TooLight mission creator
+
+    div(class='missionCreationForm')
+
+    form(action='sendToolForm' method='post')
+        label(for='creationFormName') Name
+        input(id='creationFormName' name='Name')
+        br
+        label(for='creationFormDescription') Description
+        input(id='creationFormDescription' name='Description')
+        br
+        - var tools = ['Tournevis', 'Pince']
+        each tool in tools
+            label(for=tool.toLowerCase())= tool
+            input(id=tool.toLowerCase() type='checkbox' name='Tools' value=tool.toLowerCase())
+            br
+        input(type='submit' value='Valider')
+</html>
