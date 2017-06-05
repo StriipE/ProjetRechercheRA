@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -47,7 +48,7 @@ public class CameraActivity extends AppCompatActivity{
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.siftcamera);
-        //BaseImageView = (ImageView)findViewById(R.id.Base);
+        BaseImageView = (ImageView)findViewById(R.id.Base);
         mView = (ImageView) findViewById(R.id.view);
         Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         CameraActivity.this.startActivityForResult(camera, PICTURE_RESULT);
@@ -97,7 +98,7 @@ public class CameraActivity extends AppCompatActivity{
 
                 // Get the picture taken by the user
                 mPicture = (Bitmap) data.getExtras().get("data");
-                //bitmapBaseImg = BitmapFactory.decodeResource(getResources(),R.mipmap.a);
+                bitmapBaseImg = BitmapFactory.decodeResource(getResources(),R.mipmap.a);
                 // Avoid IllegalStateException with Immutable bitmap
                 Bitmap pic = mPicture.copy(mPicture.getConfig(), true);
                 mPicture.recycle();
@@ -129,15 +130,15 @@ public class CameraActivity extends AppCompatActivity{
                 try {
                     // convert bitmap to pixels table
                     int pixels[] = toPixelsTab(mPicture);
-                    //int pixelsImgBase[] = toPixelsTab(bitmapBaseImg);
+                    int pixelsImgBase[] = toPixelsTab(bitmapBaseImg);
                     // get the features detected into a vector
                     Vector<Feature> features = SIFT.getFeatures(
                             mPicture.getWidth(), mPicture.getHeight(), pixels);
 
-                    //Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
+                    Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
 
                     // draw features on bitmap
-                    //Canvas d = new Canvas(mBaseImg);
+                    Canvas d = new Canvas(bitmapBaseImg);
                     Canvas c = new Canvas(mPicture);
                     List<Feature> imgCamera = new ArrayList<Feature>();
                     List<Feature> imgBase = new ArrayList<Feature>();
@@ -145,10 +146,10 @@ public class CameraActivity extends AppCompatActivity{
                         drawFeature(c, f.location[0], f.location[1], f.scale,f.orientation);
                         imgCamera.add(f);
                     }
-                    /*for (Feature f : featuresBaseImg){
-                        drawFeature(c, f.location[0], f.location[1], f.scale,f.orientation);
-                        imgBase.add(f);
-                    }*/
+                    for (Feature g : featuresBaseImg){
+                        drawFeature(c, g.location[0], g.location[1], g.scale,g.orientation);
+                        imgBase.add(g);
+                    }
 
 
 
