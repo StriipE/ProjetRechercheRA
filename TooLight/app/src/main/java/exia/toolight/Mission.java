@@ -7,9 +7,10 @@ import java.util.List;
  */
 
 public class Mission {
+
     private String name;
     private String description;
-    private List<Tool> toolList;
+    private ToolList toolList;
 
     public String getName() {
         return name;
@@ -23,10 +24,10 @@ public class Mission {
     public void setDescription(String description) {
         this.description = description;
     }
-    public List<Tool> getToolList() {
+    public ToolList getToolList() {
         return toolList;
     }
-    public void setToolList(List<Tool> toolList) {
+    public void setToolList(ToolList toolList) {
         this.toolList = toolList;
     }
 
@@ -34,9 +35,9 @@ public class Mission {
     {
         this.name = "";
         this.description = "";
-        this.toolList = new ArrayList<Tool>();
+        this.toolList = new ToolList();
     }
-    public Mission(String name, String description, List<Tool> toolList)
+    public Mission(String name, String description, ToolList toolList)
     {
         this.name = name;
         this.description = description;
