@@ -8,14 +8,19 @@
         android:id="@+id/ToolList"
         android:layout_width="match_parent"
         android:layout_height="242dp"
-        android:layout_weight="0.70" />
+        android:layout_weight="0.45" />
 
     <Button
-        android:id="@+id/StartCamera"
+        android:id="@+id/siftCameraButton"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="30dp"
-        android:text="Check the tools with the camera" />
+        android:text="Activate the camera with Sift treatment" />
+
+    <Button
+        android:id="@+id/orbCameraButton"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:text="Activate the camera with orb treatment" />
+
 </LinearLayout>

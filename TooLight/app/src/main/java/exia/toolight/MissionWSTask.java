@@ -64,13 +64,10 @@ class MissionWSTask extends AsyncTask<String, Void, MissionList> {
         for (int i = 0; i < missionListJSON.length(); i++)
         {
             JSONObject missionJSON = missionListJSON.getJSONObject(i);
-            // JSONArray tools = missionJSON.getJSONArray("Tools");
 
             ToolList toolList = new ToolList();
 
-            //for (int j = 0; j < tools.length(); j++) {
-            // TODO FIX WS TO HAVE CAPITAL LETTER ON TOOL NAME    toolList.addToolToList(toolFactory.getTool( tools.getString(i) ));
-            // }
+            toolList.addToolToList(toolFactory.getTool( missionJSON.getString("Tools") ));
 
             Mission mission = new Mission(missionJSON.getString("Name"), missionJSON.getString("Description"), toolList);
             missionList.addToMissionList(mission);

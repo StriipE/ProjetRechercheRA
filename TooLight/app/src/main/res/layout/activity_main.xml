@@ -21,30 +21,6 @@
             android:layout_height="wrap_content"
             android:text="Check the mission list" />
 
-        <Button
-            android:id="@+id/toolListButton"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="Check the current tool list"
-            tools:layout_editor_absoluteX="74dp"
-            tools:layout_editor_absoluteY="50dp" />
-
-        <Button
-            android:id="@+id/siftCameraButton"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="Activate the camera with Sift treatment"
-
-            tools:layout_editor_absoluteX="22dp"
-            tools:layout_editor_absoluteY="244dp" />
-
-        <Button
-            android:id="@+id/orbCameraButton"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="Activate the camera with orb treatment"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="147dp" />
     </LinearLayout>
 
 
