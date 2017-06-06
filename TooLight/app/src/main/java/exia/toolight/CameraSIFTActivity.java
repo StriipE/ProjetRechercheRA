@@ -130,29 +130,26 @@ public class CameraSIFTActivity extends AppCompatActivity{
                 try {
                     // convert bitmap to pixels table
                     int pixels[] = toPixelsTab(mPicture);
-                    int pixelsImgBase[] = toPixelsTab(bitmapBaseImg);
+                    //int pixelsImgBase[] = toPixelsTab(bitmapBaseImg);
                     // get the features detected into a vector
                     Vector<Feature> features = SIFT.getFeatures(
                             mPicture.getWidth(), mPicture.getHeight(), pixels);
 
-                    Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
+                    //Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
 
                     // draw features on bitmap
-                    Canvas d = new Canvas(bitmapBaseImg);
+                    //Canvas d = new Canvas(bitmapBaseImg);
                     Canvas c = new Canvas(mPicture);
-                    List<Feature> imgCamera = new ArrayList<Feature>();
-                    List<Feature> imgBase = new ArrayList<Feature>();
+                    //List<Feature> imgCamera = new ArrayList<Feature>();
+                    //List<Feature> imgBase = new ArrayList<Feature>();
                     for (Feature f : features) {
                         drawFeature(c, f.location[0], f.location[1], f.scale,f.orientation);
-                        imgCamera.add(f);
+                        //imgCamera.add(f);
                     }
-                    for (Feature g : featuresBaseImg){
-                        drawFeature(c, g.location[0], g.location[1], g.scale,g.orientation);
+                    /**for (Feature g : featuresBaseImg){
+                        //drawFeature(c, g.location[0], g.location[1], g.scale,g.orientation);
                         imgBase.add(g);
-                    }
-
-
-
+                    }*/
                     msg = mHandler.obtainMessage(OK);
                 } catch (Exception e) {
                     e.printStackTrace();
