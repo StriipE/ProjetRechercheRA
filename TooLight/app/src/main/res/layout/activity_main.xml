@@ -16,6 +16,12 @@
         tools:layout_editor_absoluteY="-99dp">
 
         <Button
+            android:id="@+id/missionListButton"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Check the mission list" />
+
+        <Button
             android:id="@+id/toolListButton"
             android:layout_width="wrap_content"
             android:layout_height="48dp"

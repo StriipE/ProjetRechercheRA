@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     public static final String TOOL_EXTRA_MESSAGE = "exia.toolight.TOOLLIST";
+
     private ToolFactory toolFactory = new ToolFactory();
 
     @Override
@@ -19,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button consultToolListButton = (Button) findViewById(R.id.toolListButton);
         Button siftCameraButton = (Button)findViewById(R.id.siftCameraButton);
+        Button consultMissionListButton = (Button) findViewById(R.id.missionListButton);
         Button orbCameraButton = (Button)findViewById(R.id.orbCameraButton);
+
         consultToolListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,7 +35,12 @@ public class MainActivity extends AppCompatActivity {
                 activateSiftCamera();
             }
         });
-
+        consultMissionListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                consultMissionList();
+            }
+        });
         orbCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siftCamera);
 
     }
+
     public void consultToolList() {
 
         Intent toolListIntent = new Intent(this, ToolListActivity.class);
@@ -71,4 +80,10 @@ public class MainActivity extends AppCompatActivity {
         toolListIntent.putStringArrayListExtra(TOOL_EXTRA_MESSAGE, toolList.toStringList());
         startActivity(toolListIntent);
     }
+
+    public void consultMissionList() {
+        Intent missionListIntent = new Intent(this, MissionListActivity.class);
+        startActivity(missionListIntent);
+    }
+
 }
