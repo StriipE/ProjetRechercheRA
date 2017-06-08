@@ -17,7 +17,7 @@ public class Tournevis implements Tool {
 
     @Override
     public void setToolName() {
-        this.toolName = "Tournevis";
+        this.toolName = "tournevis";
     }
 
     @Override

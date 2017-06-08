@@ -17,7 +17,7 @@ public class Pince implements Tool {
 
     @Override
     public void setToolName() {
-        this.toolName = "Pince";
+        this.toolName = "pince";
     }
 
     @Override

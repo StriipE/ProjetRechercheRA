@@ -5,10 +5,12 @@ package exia.toolight;
  */
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -18,11 +20,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 
 import mpi.cbg.fly.Feature;
@@ -40,7 +42,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
     private Bitmap mPicture;
     private ImageView mView;
     private ImageView BaseImageView;
-
+    private static String TAG = "PermissionCamera";
 
 
     private ProgressDialog mProgressDialog;
@@ -50,6 +52,13 @@ public class CameraSIFTActivity extends AppCompatActivity{
         setContentView(R.layout.siftcamera);
         BaseImageView = (ImageView)findViewById(R.id.Base);
         mView = (ImageView) findViewById(R.id.view);
+
+        int permission = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CAMERA);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "Permission to record denied");
+        }
         Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         CameraSIFTActivity.this.startActivityForResult(camera, PICTURE_RESULT);
 
@@ -98,7 +107,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
 
                 // Get the picture taken by the user
                 mPicture = (Bitmap) data.getExtras().get("data");
-                bitmapBaseImg = BitmapFactory.decodeResource(getResources(),R.mipmap.a);
+                //bitmapBaseImg = BitmapFactory.decodeResource(getResources(),R.mipmap.pince);
                 // Avoid IllegalStateException with Immutable bitmap
                 Bitmap pic = mPicture.copy(mPicture.getConfig(), true);
                 mPicture.recycle();
@@ -117,9 +126,6 @@ public class CameraSIFTActivity extends AppCompatActivity{
     }
 
     private void processSIFT() {
-        // show the dialog
-        mProgressDialog = ProgressDialog.show(this, "Please wait",
-                "Processing of SIFT Algorithm...");
 
         new Thread(new Runnable() {
 
@@ -135,7 +141,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
                     Vector<Feature> features = SIFT.getFeatures(
                             mPicture.getWidth(), mPicture.getHeight(), pixels);
 
-                    //Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
+                   //Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
 
                     // draw features on bitmap
                     //Canvas d = new Canvas(bitmapBaseImg);
@@ -146,9 +152,9 @@ public class CameraSIFTActivity extends AppCompatActivity{
                         drawFeature(c, f.location[0], f.location[1], f.scale,f.orientation);
                         //imgCamera.add(f);
                     }
-                    /**for (Feature g : featuresBaseImg){
+                    /*for (Feature g : featuresBaseImg){
                         //drawFeature(c, g.location[0], g.location[1], g.scale,g.orientation);
-                        imgBase.add(g);
+                        //imgBase.add(g);
                     }*/
                     msg = mHandler.obtainMessage(OK);
                 } catch (Exception e) {
@@ -226,7 +232,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
                     builder.show();
                     break;
             }
-            mProgressDialog.dismiss();
+            //mProgressDialog.dismiss();
         }
     };
 }

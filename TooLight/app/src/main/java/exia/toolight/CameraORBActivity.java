@@ -34,7 +34,6 @@ import org.opencv.features2d.Features2d;
 import org.opencv.imgproc.Imgproc;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -92,7 +91,7 @@ public class CameraORBActivity extends Activity implements CameraBridgeViewBase.
         AssetManager assetManager = getAssets();
         //InputStream istr = assetManager.open("a.jpeg");
         //Bitmap bitmap = BitmapFactory.decodeStream(istr);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.a);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.marteaux);
         Utils.bitmapToMat(bitmap, img1);
         Imgproc.cvtColor(img1, img1, Imgproc.COLOR_RGB2GRAY);
         img1.convertTo(img1, 0); //converting the image to match with the type of the cameras image
