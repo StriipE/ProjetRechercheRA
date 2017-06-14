@@ -2,22 +2,31 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\auffr\Documents\GitHub\ProjetRechercheRA\TooLight\app\src\libs\javasift.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="90acdb67489756e1dfe9bbfd3810d205aa6ea0eb">
+        <dex dex="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_92955ddd5d09f965233d69518a9a6ede718d4ae2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\src\libs\javasift.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="16bad636672081690b1d0464231402f10677b3f4">
-        <dex dex="C:\Users\auffr\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\pre-dexed\debug\javasift_e7879f23b95b0b9a8d787337cc318e617eda804c.jar" />
+        <dex dex="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\2\javasift_bdc574f90a5380e35eff5e657bf50030f9c79883\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\auffr\Documents\GitHub\ProjetRechercheRA\TooLight\openCVLibrary320\build\intermediates\bundles\default\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="038e8806866760ccd8568b401b8052e937e4be1a">
-        <dex dex="C:\Users\auffr\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\pre-dexed\debug\classes_e104524237ad327d68f6e03bf0b86640a19a7a1c.jar" />
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="C:\Users\Cyril\Documents\GitHub\ProjetRechercheRA\TooLight\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_304180c26f8c71b28f96737a091158a9aa7e3031\classes.dex" />
     </item>
 
 </items>
