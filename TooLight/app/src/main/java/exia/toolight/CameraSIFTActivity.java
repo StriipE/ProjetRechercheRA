@@ -38,10 +38,10 @@ public class CameraSIFTActivity extends AppCompatActivity{
     private static final int OK = 0;
     private static final int MEMORY_ERROR = 1;
     private static final int ERROR = 2;
-    private Bitmap bitmapBaseImg;
+    private Bitmap mBitmapBase;
     private Bitmap mPicture;
     private ImageView mView;
-    private ImageView BaseImageView;
+    private ImageView mBaseImageView;
     private static String TAG = "PermissionCamera";
 
 
@@ -50,7 +50,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.siftcamera);
-        BaseImageView = (ImageView)findViewById(R.id.Base);
+        mBaseImageView = (ImageView)findViewById(R.id.Base);
         mView = (ImageView) findViewById(R.id.view);
 
         int permission = ContextCompat.checkSelfPermission(this,
@@ -105,17 +105,19 @@ public class CameraSIFTActivity extends AppCompatActivity{
                 if(mPicture != null)
                     mPicture.recycle();
 
+
                 // Get the picture taken by the user
                 mPicture = (Bitmap) data.getExtras().get("data");
-                //bitmapBaseImg = BitmapFactory.decodeResource(getResources(),R.mipmap.pince);
+                mBitmapBase = BitmapFactory.decodeResource(getResources(),R.mipmap.pince);
                 // Avoid IllegalStateException with Immutable bitmap
+                Bitmap picBase =mBitmapBase;
                 Bitmap pic = mPicture.copy(mPicture.getConfig(), true);
                 mPicture.recycle();
                 mPicture = pic;
                 // Show the picture
 
                 mView.setImageBitmap(mPicture);
-
+                mBaseImageView.setImageBitmap(mBitmapBase);
                 // process SIFT algorithm on the picture
                 processSIFT();
 
@@ -136,15 +138,15 @@ public class CameraSIFTActivity extends AppCompatActivity{
                 try {
                     // convert bitmap to pixels table
                     int pixels[] = toPixelsTab(mPicture);
-                    //int pixelsImgBase[] = toPixelsTab(bitmapBaseImg);
+                    int pixelsImgBase[] = toPixelsTab(mBitmapBase);
                     // get the features detected into a vector
                     Vector<Feature> features = SIFT.getFeatures(
                             mPicture.getWidth(), mPicture.getHeight(), pixels);
 
-                   //Vector<Feature> featuresBaseImg = SIFT.getFeatures(bitmapBaseImg.getWidth(),bitmapBaseImg.getHeight(),pixelsImgBase);
+                   Vector<Feature> featuresBaseImg = SIFT.getFeatures(mBitmapBase.getWidth(),mBitmapBase.getHeight(),pixelsImgBase);
 
                     // draw features on bitmap
-                    //Canvas d = new Canvas(bitmapBaseImg);
+                    //Canvas d = new Canvas(mBitmapBase);
                     Canvas c = new Canvas(mPicture);
                     //List<Feature> imgCamera = new ArrayList<Feature>();
                     //List<Feature> imgBase = new ArrayList<Feature>();
@@ -153,7 +155,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
                         //imgCamera.add(f);
                     }
                     /*for (Feature g : featuresBaseImg){
-                        //drawFeature(c, g.location[0], g.location[1], g.scale,g.orientation);
+                        drawFeature(c, g.location[0], g.location[1], g.scale,g.orientation);
                         //imgBase.add(g);
                     }*/
                     msg = mHandler.obtainMessage(OK);
@@ -218,6 +220,7 @@ public class CameraSIFTActivity extends AppCompatActivity{
                 case OK:
                     // set the picture with features drawed
                     mView.setImageBitmap(mPicture);
+                    mBaseImageView.setImageBitmap(mBitmapBase);
                     break;
                 case MEMORY_ERROR:
                     builder = new AlertDialog.Builder(CameraSIFTActivity.this);

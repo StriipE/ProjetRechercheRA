@@ -91,7 +91,7 @@ public class CameraORBActivity extends Activity implements CameraBridgeViewBase.
         AssetManager assetManager = getAssets();
         //InputStream istr = assetManager.open("a.jpeg");
         //Bitmap bitmap = BitmapFactory.decodeStream(istr);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.marteaux);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.pince);
         Utils.bitmapToMat(bitmap, img1);
         Imgproc.cvtColor(img1, img1, Imgproc.COLOR_RGB2GRAY);
         img1.convertTo(img1, 0); //converting the image to match with the type of the cameras image
