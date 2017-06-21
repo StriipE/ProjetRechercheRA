@@ -11,13 +11,6 @@
         android:layout_weight="0.45" />
 
     <Button
-        android:id="@+id/siftCameraButton"
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-        android:text="Activate the camera with Sift treatment" />
-
-    <Button
         android:id="@+id/orbCameraButton"
         android:layout_width="match_parent"
         android:layout_height="43dp"

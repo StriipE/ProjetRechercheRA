@@ -27,13 +27,6 @@ public class ToolListActivity extends AppCompatActivity {
         Button orbCameraButton = (Button) findViewById(R.id.orbCameraButton);
         List<String> toolStringList = toolListIntent.getStringArrayListExtra(MainActivity.TOOL_EXTRA_MESSAGE);
 
-        siftCameraButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activateSiftCamera();
-            }
-        });
-
         orbCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,11 +49,6 @@ public class ToolListActivity extends AppCompatActivity {
     public void activateOrbCamera(){
         Intent orbCamera = new Intent(this, CameraORBActivity.class);
         startActivity(orbCamera);
-    }
-
-    public void activateSiftCamera(){
-        Intent siftCamera = new Intent(this, CameraSIFTActivity.class);
-        startActivity(siftCamera);
     }
 
 }

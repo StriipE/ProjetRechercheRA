@@ -25,10 +25,6 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
             </meta-data>
         </activity>
-        <activity android:name=".CameraSIFTActivity"  android:parentActivityName=".MainActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
-            </meta-data>
-        </activity>
         <activity android:name=".CameraORBActivity"  android:parentActivityName=".MainActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
             </meta-data>
